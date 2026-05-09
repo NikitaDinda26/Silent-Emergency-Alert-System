@@ -1,6 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,40 +14,59 @@ body {
   background-size: 400% 400%;
   animation: move 10s ease infinite;
 }
-.auth-box {
+
+@keyframes move {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Glass card effect (HOME PAGE) */
+.hero {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
 
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(15px);
 
   color: white;
-  width: 300px;
   box-shadow: 0 0 30px rgba(0,0,0,0.4);
 }
 
-.auth-box input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: none;
-  outline: none;
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
-.auth-box button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 8px;
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* Buttons (HOME PAGE) */
+.buttons a {
+  text-decoration: none;
+  margin: 10px;
+  padding: 12px 25px;
   background: white;
+  color: black;
+  border-radius: 10px;
   font-weight: bold;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-.auth-box button:hover {
+.buttons a:hover {
   background: #0ea5e9;
   color: white;
+  transform: scale(1.1);
+}
+
+/* ✅ ADD THIS HERE (LOGIN + REGISTER ONLY) */
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  text-align: center;
 }

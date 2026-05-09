@@ -1,24 +1,49 @@
-.buttons {
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
-}
 
-.buttons a {
-  width: 200px;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #22c55e);
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+.auth-box {
   text-align: center;
-  text-decoration: none;
-  padding: 12px 25px;
-  background: white;
-  color: black;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+
+  color: white;
+  width: 300px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
 }
 
-.buttons a:hover {
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
   background: #0ea5e9;
   color: white;
-  transform: scale(1.05);
 }

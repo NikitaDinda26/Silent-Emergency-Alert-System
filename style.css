@@ -1,25 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🔥 Modern animated background */
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #22c55e);
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+
+@keyframes move {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Glass card effect */
+.hero {
   text-align: center;
-  background: #0f172a;
+  padding: 50px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+
   color: white;
-  margin-top: 60px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
 }
 
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
-button {
-  padding: 10px 20px;
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.buttons a {
+  text-decoration: none;
   margin: 10px;
-  cursor: pointer;
+  padding: 12px 25px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.sos {
-  background: red;
+.buttons a:hover {
+  background: #0ea5e9;
   color: white;
-  font-size: 18px;
+  transform: scale(1.1);
 }

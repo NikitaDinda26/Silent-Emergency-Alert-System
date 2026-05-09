@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', Arial;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
 
+  /* 🔥 Modern animated background */
   background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #22c55e);
   background-size: 400% 400%;
   animation: move 10s ease infinite;
@@ -22,9 +22,10 @@ body {
   100% {background-position: 0% 50%;}
 }
 
+/* Glass card effect */
 .hero {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
 
   background: rgba(255,255,255,0.1);
@@ -32,41 +33,32 @@ body {
 
   color: white;
   box-shadow: 0 0 30px rgba(0,0,0,0.4);
-  width: 320px;
 }
 
-h1 {
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: none;
-  outline: none;
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 25px;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-
-  border: none;
-  border-radius: 8px;
+/* Buttons */
+.buttons a {
+  text-decoration: none;
+  margin: 10px;
+  padding: 12px 25px;
   background: white;
+  color: black;
+  border-radius: 10px;
   font-weight: bold;
-  cursor: pointer;
   transition: 0.3s;
 }
 
-button:hover {
+.buttons a:hover {
   background: #0ea5e9;
   color: white;
-}
-
-a {
-  color: white;
-  text-decoration: underline;
+  transform: scale(1.1);
 }

@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Emergency Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<button onclick="sendAlert()">SEND SOS</button>
 
-<p id="status"></p>
-
-<script>
-function sendAlert() {
-  document.getElementById("status").innerHTML =
-    "🚨 Emergency Alert Sent Successfully to Registered Family Members!";
-}
-</script>
   <div class="hero">
-    <h1>Dashboard</h1>
 
-    <p>Status: Safe 🙂</p>
+    <h1>🚨 Emergency Dashboard</h1>
 
-    <button onclick="alert('🚨 SOS SENT! Emergency Alert Activated')">SEND SOS</button>
+    <p>Status: Safe</p>
 
-    <button onclick="location.href='index.html'">Logout</button>
+    <!-- SOS Button -->
+    <button id="sosBtn">SEND SOS</button>
+
+    <!-- SOS Message -->
+    <p id="statusMessage"></p>
+
+    <br>
+
+    <!-- Logout Button -->
+    <button onclick="location.href='index.html'">
+      Logout
+    </button>
+
   </div>
+
+  <script>
+    const sosBtn = document.getElementById("sosBtn");
+
+    sosBtn.addEventListener("click", function () {
+      document.getElementById("statusMessage").innerHTML =
+        "🚨 SOS Sent to Family Members!";
+    });
+  </script>
 
 </body>
 </html>

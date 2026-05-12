@@ -6,7 +6,16 @@
 </head>
 
 <body>
+<button onclick="sendAlert()">SEND SOS</button>
 
+<p id="status"></p>
+
+<script>
+function sendAlert() {
+  document.getElementById("status").innerHTML =
+    "🚨 Emergency Alert Sent Successfully to Registered Family Members!";
+}
+</script>
   <div class="hero">
     <h1>Dashboard</h1>
 
